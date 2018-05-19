@@ -1,8 +1,0 @@
-Records for two earthquakes illustrate the catalog format:
->
-4.55  -65.630  49.440  15 1967 09 30 22 39 48.  0.240 4.55 1.165 NCE|mn,4.7
-5.65  -77.930  37.940   6 2011 08 23 17 51 05.  0.100 5.63 1.027 SLU|wo,5.65
->
-123456789012345678901234567890123456789012345678901234567890123456
->
-Field 1 lists Mw, fields 2 and 3 list longitude and latitude, and field 4 lists depth (km). Fields 5-10 list origin time (year, month, day, hour, minute, second; UTC). Fields 11-13 list sigma_m, Mwe, and N*. The comment field (of arbitrary length) begins in column 66. The Mw in field 1 is the most natural or widely accepted value (in our judgment), whereas Mwe for rate calculations is listed in field 12. For the 1967 earthquake, MNuttli ("mn,4.7") is converted to Mw = Mwe = 4.55. For the 2011 (Mineral, Virginia) earthquake, Mw = 5.65 is estimated from analysis of waveforms, and adjusted to Mwe = 5.63. Two characters after "|" in the comment field denote the type or treatment of the original size measure.
