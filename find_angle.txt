@@ -1,0 +1,19 @@
+import shapely
+from shapely.geometry import Point
+import numpy as np
+
+def give_angle(P1 , P2, interP):
+    dx = P1.x-interP.x
+    dy = P1.y-interP.y
+
+    dx2 = interP.x-P2.x
+    dy2 = interP.y-P2.y
+
+    azimuth1 = np.arctan2(dx,dy)*180/np.pi
+    azimuth2 = np.arctan2(dx2,dy2)*180/np.pi
+    return (azimuth1-azimuth2)
+
+P1 = Point(47.052257,8.296906)
+P2 = Point(47.052246,8.296885)
+interP = Point(47.052150,8.296925)
+angle = give_angle(P1,P2,interP)
