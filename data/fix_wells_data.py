@@ -1,7 +1,7 @@
 import pandas as pd
 
-wells = open( 'csv/wells.csv', 'r' )
-f = open( 'csv/wells_fixed.csv', 'w' )
+wells = open( 'asc/wells.asc', 'r' )
+f = open( 'csv/wells.csv', 'w' )
 
 # first row for labels
 f.write( 'Longitude, Latitude, Depth, Year, Jan Vol, Jan PSI, Feb Vol, Feb PSI, ' +
@@ -15,14 +15,14 @@ for idx, row in enumerate( rows ):
     # ignore the first row (just labels)
     if idx == 0:
         continue
-    # ignore rows with coordinates (0,0)
-    elif data[1] == '0' or data[2] == '0':
+    # ignore rows with coordinates ( , )
+    elif data[0] == '' or data[1] == '':
         continue
 
     # process valid rows
     for idx, datum in enumerate( data ):
-        # ignore 1st col (empty) and 4th col (irrelevent data)
-        if idx == 0 or idx == 3 :
+        # ignore 3th col (irrelevent data)
+        if idx == 2 :
             continue
         # last data point already has newline
         elif idx == len( data ) - 1:
