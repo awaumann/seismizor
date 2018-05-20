@@ -4,7 +4,7 @@ wells = open( 'asc/wells.asc', 'r' )
 f = open( 'csv/wells.csv', 'w' )
 
 # first row for labels
-f.write( 'Longitude, Latitude, Depth, Year, Jan Vol, Jan PSI, Feb Vol, Feb PSI, ' +
+f.write( 'Latitude, Longitude, Depth, Year, Jan Vol, Jan PSI, Feb Vol, Feb PSI, ' +
           'Mar Vol, Mar PSI, Apr Vol, Apr PSI, May Vol, May PSI, June Vol, June PSI, ' +
           'Jul Vol, Jul PSI, Aug Vol, Aug PSI, Sep Vol, Sep PSI, Oct Vol, Oct PSI, ' +
           'Nov Vol, Nov PSI, Dec Vol, Dec PSI\n' )
