@@ -30,8 +30,10 @@ def main( argc, argv ):
         # only add to dataset if coordinates are inside of OK
         lng = float( data[1] )
         lat = float( data[2] )
-        if lng >= -99.990018 and lng <= -94.622067 and lat >= 33.692826 and lat <= 36.996495 or \
-           lng >= -102.986504 and lng <= -99.990018 and lat >= 36.526683 and lat <= 36.979498:
+        year = int( data[4] )
+        if (lng >= -99.990018 and lng <= -94.622067 and lat >= 33.692826 and lat <= 36.996495 or \
+           lng >= -102.986504 and lng <= -99.990018 and lat >= 36.526683 and lat <= 36.979498) and \
+           year >= 2011:
             for idx, datum in enumerate( data ):
                 if idx < 7:
                     csv_file.write( datum + ', ' )
